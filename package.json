@@ -16,7 +16,8 @@
         "lint": "eslint src",
         "clean": "rm -rf lib",
         "build": "yarn clean && babel src -d lib",
-        "start": "babel src -w -d lib"
+        "start": "babel src -w -d lib",
+        "prepublish": "yarn build"
     },
     "repository": {
         "type": "git",
