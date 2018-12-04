@@ -11,14 +11,10 @@ export class Anew {
     }
 
     use(pkg, config) {
-        if (config) {
-            this.packages.push({ package: pkg, config })
+        if (isArray(pkg)) {
+            this.packages = [...this.packages, ...pkg]
         } else {
-            if (isArray(pkg)) {
-                this.packages = [...this.packages, ...pkg]
-            } else {
-                this.packages.push(pkg)
-            }
+            this.packages.push([pkg, config])
         }
 
         return this
