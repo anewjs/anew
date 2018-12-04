@@ -2,7 +2,7 @@ import { render } from 'react-dom'
 import React from 'react'
 
 import composePackages from './composePackages'
-import getElement from './getElement'
+import query from './query'
 import isArray from './isArray'
 
 export class Anew {
@@ -20,16 +20,16 @@ export class Anew {
         return this
     }
 
-    render(entry, query) {
-        if (typeof entry === 'string' && !query) {
-            query = entry
+    render(entry, el) {
+        if (entry && !el) {
+            el = entry
             entry = undefined
         }
 
-        const AnewApp = composePackages(this.packages, !!query)(entry)
+        const AnewApp = composePackages(this.packages, !!el)(entry)
 
-        if (query) {
-            render(<AnewApp />, getElement(query))
+        if (el) {
+            render(<AnewApp />, query(el))
         }
 
         return AnewApp
