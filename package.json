@@ -5,7 +5,7 @@
     "main": "lib/index.js",
     "author": "Abdelrahman Salem <abubakir1997@gmail.com> (http://www.pages.drexel.edu/\\~aas372/)",
     "license": "MIT",
-    "homepage": "https://github.com/anew-org/anew#readme",
+    "homepage": "https://github.com/anewjs/anew#readme",
     "directories": {
         "lib": "lib"
     },
@@ -21,11 +21,11 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/anew-org/anew.git"
+        "url": "git+https://github.com/anewjs/anew.git"
     },
     "keywords": ["anew", "react", "react-dom", "render", "mount"],
     "bugs": {
-        "url": "https://github.com/anew-org/anew/issues"
+        "url": "https://github.com/anewjs/anew/issues"
     },
     "husky": {
         "hooks": {
