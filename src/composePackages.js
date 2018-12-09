@@ -23,7 +23,8 @@ export default function composePackages(packages, isRoot) {
             const [WrapperExec, wrapperConfig] = extractPackage(Wrapper)
             const [WrappedExec, wrappedConfig] = extractPackage(Wrapped)
 
-            return entry => WrapperExec(WrappedExec(entry, wrappedConfig, isRoot), wrapperConfig, isRoot)
+            return entry =>
+                WrapperExec(WrappedExec(entry, wrappedConfig, isRoot), wrapperConfig, isRoot)
         })
     }
 }
