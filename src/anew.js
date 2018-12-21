@@ -26,7 +26,7 @@ export class Anew {
             entry = undefined
         }
 
-        const AnewApp = composePackages(this.packages, !!el)(entry)
+        const AnewApp = this.packages.length ? composePackages(this.packages, !!el)(entry) : entry
 
         if (el) {
             render(<AnewApp />, query(el))
